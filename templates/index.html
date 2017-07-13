@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cloud data querying</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="stylesheets/style.css" />
+</head>
+<body>
+	<table>
+		<tr>
+			<form action="/query" method="post" enctype="multipart/form-data">
+				{%if session['username']%}
+					Hello {{username}}
+				{%else%}
+					enter username: <br> <input type="text" name="username"><br> 
+				{%endif%}
+				<br><input type="file" name="ufile">
+				<br><input type="submit" value="next">
+            </form>
+			<br>
+			<form action="/cache">
+			Table name<input type="text" value="tname"><br>
+			column name<input type="text" value="cname"><br>
+			<input type="submit" value="Run random query using cache">
+			</form><br>
+			<form action="/random">
+			Table name<input type="text" value="tname"><br>
+			column name<input type="text" value="cname"><br>
+			<br><input type="submit" value="Run random query">
+			</form>
+			<form action="/r1" method="post">
+			field1<input type="text" name="f1"><br>
+			field2<input type="text" name="f2"><br>
+			<br><input type="submit" value="Run query">
+			</form>
+		</tr>
+	</table>
+</body>
+</html>

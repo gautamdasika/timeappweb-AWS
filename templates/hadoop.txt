@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cloud data querying</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="stylesheets/style.css" />
+</head>
+<body>
+	<table>
+		<tr>
+			<form action="/mapreduce" method="post" enctype="multipart/form-data">
+				<input type="file" name="ufile">
+				<input type="submit" value="Submit">
+            </form>
+		</tr>
+	</table>
+</body>
+</html>
